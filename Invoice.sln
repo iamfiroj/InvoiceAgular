@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Invoice", ".", "{40514979-DF62-4DFC-A91A-012B3DF1AAB6}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50347"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\Projects\SourceCode\InvoiceGenerator\Invoice\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50347\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50347"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\Projects\SourceCode\InvoiceGenerator\Invoice\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50347\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50347"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40514979-DF62-4DFC-A91A-012B3DF1AAB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40514979-DF62-4DFC-A91A-012B3DF1AAB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11C1E60A-A684-46A2-A8FA-50BF41E568B4}
+	EndGlobalSection
+EndGlobal

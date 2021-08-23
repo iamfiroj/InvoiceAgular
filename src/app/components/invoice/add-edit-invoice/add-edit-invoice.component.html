@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Invoice</h3>
+    </div>
+    <div class="card-body">
+      <form #f="ngForm" name="form" (ngSubmit)="saveInvoice()" novalidate>
+        <div class="form-group">
+          <strong>ClientId</strong>
+          <select class="form-control" [(ngModel)]="invoice.clientId" name="clientId" required>
+            <option *ngFor="let item of clients" [value]="item.id">
+              {{item.id}}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <strong>Invoice No.</strong>
+          <input type="text" class="form-control" placeholder="invoice number" [ngClass]="{'is-invalid':number.invalid}" name="number" [(ngModel)]="invoice.invoiceNumber" #number="ngModel"  required />
+          <span *ngIf="number.invalid && (number.dirty || number.touched)" class="text-danger">
+            <span *ngIf="number.errors?.required">
+              Invoice Number is required
+            </span>
+          </span>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-info" type="button" (click)="addItem()">Add InvoiceItem</button>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let ob of invoice.invoiceitems;let i= index">
+                <td><input type="text" class="form-control" placeholder="Text" name="{{'text' + i}}" [(ngModel)]="ob.text" /></td>
+                <td><input type="text" class="form-control" placeholder="Quantity" name="{{'quantity'+i}}" [(ngModel)]="ob.quantity" /></td>
+                <td><input type="text" class="form-control" placeholder="Amount" name="{{'amount' + i}}" [(ngModel)]="ob.amount" /></td>
+                <td>
+                  <a href="javascript:void(0)">
+                    <i class="material-icons" (click)="delete(ob)">delete</i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+        <button type="submit" class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

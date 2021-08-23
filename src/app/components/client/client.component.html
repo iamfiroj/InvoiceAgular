@@ -1,0 +1,38 @@
+
+<div class="container">
+
+  <div class="card">
+    <div class="card-header">
+      <div class="text-right">
+        <a routerLink="/addedit">Add Client</a>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <table class="table table-bordered">
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Action</th>
+          </tr>
+          <tr *ngFor="let client of clients">
+            <td>{{client.name}}</td>
+            <td>{{client.email}}</td>
+            <td>{{client.address}}</td>
+            <td>{{client.phone}}</td>
+            <td>
+              <a href="javascript:void(0)">
+                <span  class="material-icons" (click)="edit(client.id)">edit</span>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="material-icons" (click)="delete(client)">delete</i>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

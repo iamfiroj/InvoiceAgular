@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h2>
+        Invoice List
+      </h2>
+      <div class="text-right">
+        <button class="btn btn-info" (click)="add()"><i class="far fa-plus"></i> Add Invoice</button>
+      </div>
+      
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <tr>
+          <th>Client Name</th>
+          <th>Invoice Number</th>
+        </tr>
+        <tbody>
+          <tr *ngFor="let item of invoices">
+            <td>
+              {{item.client.name}}
+            </td>
+            <td>
+              {{item.invoiceNumber}}
+            </td>
+            <td>
+              <a href="javascript:void(0)">
+                <span class="material-icons" (click)="edit(item.id)">edit</span>
+              </a>
+              <a href="javascript:void(0)">
+                <i class="material-icons" (click)="delete(item)">delete</i>
+              </a>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+ 
+    </div>
+  </div>
+</div>
